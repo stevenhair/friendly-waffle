@@ -1,5 +1,5 @@
 # friendly-waffle
-A reproduction of cdimascio/express-openapi-validator#539
+A reproduction of [cdimascio/express-openapi-validator#539](https://github.com/cdimascio/express-openapi-validator/issues/539)
 
 ## Requirements
 
