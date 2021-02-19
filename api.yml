@@ -1,0 +1,36 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Example App
+  license:
+    name: MIT
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: foo-session
+paths:
+  /:
+    get:
+      summary: Get a friendly message
+      operationId: hello
+      tags:
+        - hello
+      security:
+        - cookieAuth: []
+      responses:
+        '200':
+          description: A friendly greeting
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+                additionalProperties: false
